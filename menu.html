@@ -1,251 +1,334 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>B05 Comida Libanesa — Menú</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B05 • Lebanese Menu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+    body { font-family: 'Inter', system_ui, sans-serif; }
+    .heading-font { font-family: 'Playfair Display', sans-serif; }
+    .dish-item { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+    .dish-item:hover { transform: translateX(8px); }
+    .section-title {
+      position: relative;
+      display: inline-block;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 60%;
+      height: 2px;
+      background: linear-gradient(to right, #9c2a4a, #d4af87);
+    }
+  </style>
 </head>
-<body>
-  <main class="container">
+<body class="bg-stone-50 text-stone-900 leading-relaxed">
 
-    <!-- MEZZE FRÍO -->
-    <section class="menu-section">
-      <h2>MEZZE FRÍO</h2>
-      <div class="p">Todos nuestros platos son caseros y elaborados con productos frescos y aceite de oliva virgen extra</div>
+  <!-- HEADER -->
+  <header class="bg-white border-b border-stone-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-8 flex items-center justify-between">
+      <div class="flex items-center gap-x-3">
+        <div class="w-11 h-11 bg-amber-900 text-white rounded-xl flex items-center justify-center text-2xl font-bold heading-font">B05</div>
+        <div>
+          <span class="text-3xl tracking-tight heading-font text-amber-950">B05</span>
+          <span class="text-xs block -mt-1 text-stone-500 tracking-[2px]">LEBANESE</span>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+        <a href="#" class="hover:text-amber-800 transition-colors">MENU</a>
+        <a href="#" class="hover:text-amber-800 transition-colors">WINE</a>
+        <a href="#" class="hover:text-amber-800 transition-colors">RESERVATIONS</a>
+      </nav>
+      <div class="text-right">
+        <div class="text-xs text-stone-500">Valencia • Spain</div>
+        <div class="text-lg font-semibold text-amber-900">+34 963 00 00 00</div>
+      </div>
+    </div>
+  </header>
 
-      <div class="menu-item">
-        <div class="menu-row">
-          <div class="menu-header">
-            <h3>5. HUMMUS	</h3>
-            <span class="price">8 / 12 </span>
+  <div class="max-w-7xl mx-auto px-6 py-12">
+
+    <!-- HERO TITLE -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-x-2 bg-white px-6 py-2 rounded-3xl border border-amber-100 mb-6">
+        <span class="text-amber-800 text-sm font-medium tracking-widest">EST. 2023</span>
+      </div>
+      <h1 class="heading-font text-6xl md:text-7xl tracking-tighter text-amber-950">Authentic Lebanese</h1>
+      <p class="mt-3 text-stone-600 max-w-md mx-auto">Traditional recipes • Fresh daily • Volcanic stone grill</p>
+    </div>
+
+    <!-- SHAWARMA TABLES - TWO COLUMNS -->
+    <div class="grid md:grid-cols-2 gap-12 mb-20">
+
+      <!-- CARNE -->
+      <div>
+        <h2 class="section-title heading-font text-3xl text-amber-900 mb-8">Shawarma Carne</h2>
+        
+        <div class="bg-white rounded-3xl p-8 shadow-sm border border-stone-100">
+          <div class="flex justify-between items-baseline mb-6">
+            <div>
+              <div class="font-semibold text-xl">Individual <span class="text-sm font-normal text-stone-500">(200 g)</span></div>
+              <div class="text-sm text-stone-600">Premium beef sirloin, traditional Lebanese marinade</div>
+            </div>
+            <div class="text-right">
+              <div class="text-4xl font-bold text-amber-900">28</div>
+              <div class="text-xs text-stone-500">€</div>
+            </div>
           </div>
-          <p>Deliciosa crema libanesa de garbanzos con tahini, ajo, limón y comino.</p>
+          
+          <div class="flex justify-between items-baseline">
+            <div>
+              <div class="font-semibold text-xl">Mezza <span class="text-sm font-normal text-stone-500">(400 g)</span></div>
+              <div class="text-sm text-stone-600">Perfect for sharing</div>
+            </div>
+            <div class="text-right">
+              <div class="text-4xl font-bold text-amber-900">45</div>
+              <div class="text-xs text-stone-500">€</div>
+            </div>
+          </div>
+          
+          <div class="mt-8 pt-6 border-t text-xs text-stone-500 leading-relaxed">
+            Accompanied by golden crisp wedges, Lebanese rice, hummus, muhammara, fresh salad with cherry tomatoes &amp; mushrooms, honey-mustard vinaigrette.<br>
+            <span class="block mt-3 text-amber-800">* Sharing add-on +10 € (extra 100 g shawarma + grilled eggplant, wedges &amp; mushroom salad)</span>
+          </div>
         </div>
       </div>
 
-      <div class="menu-item">
-        <div class="menu-row">
-          <div class="menu-header">
-            <h3>6. HUMMUS TRUFADO 	</h3>
-            <span class="price">12 / 16 </span>
+      <!-- POLLO -->
+      <div>
+        <h2 class="section-title heading-font text-3xl text-amber-900 mb-8">Shawarma Pollo</h2>
+        
+        <div class="bg-white rounded-3xl p-8 shadow-sm border border-stone-100">
+          <div class="flex justify-between items-baseline mb-6">
+            <div>
+              <div class="font-semibold text-xl">Individual <span class="text-sm font-normal text-stone-500">(200 g)</span></div>
+              <div class="text-sm text-stone-600">Free-range chicken, lemon-garlic marinade</div>
+            </div>
+            <div class="text-right">
+              <div class="text-4xl font-bold text-amber-900">26</div>
+              <div class="text-xs text-stone-500">€</div>
+            </div>
           </div>
-          <p>Con trufa y Parmigiano DOP.</p>
+          
+          <div class="flex justify-between items-baseline">
+            <div>
+              <div class="font-semibold text-xl">Mezza <span class="text-sm font-normal text-stone-500">(400 g)</span></div>
+              <div class="text-sm text-stone-600">Perfect for sharing</div>
+            </div>
+            <div class="text-right">
+              <div class="text-4xl font-bold text-amber-900">43</div>
+              <div class="text-xs text-stone-500">€</div>
+            </div>
+          </div>
+          
+          <div class="mt-8 pt-6 border-t text-xs text-stone-500 leading-relaxed">
+            Accompanied by golden crisp wedges, Lebanese rice, hummus, muhammara, fresh salad with cherry tomatoes &amp; mushrooms, honey-mustard vinaigrette.<br>
+            <span class="block mt-3 text-amber-800">* Sharing add-on +8 € (extra 100 g shawarma + grilled eggplant, wedges &amp; mushroom salad)</span>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="menu-item">
-        <div class="menu-row">
-          <div class="menu-header">
-            <h3>7. HUMMUS BEIRUT </h3>
-            <span class="price">13 / 17 </span>
+    <!-- MEZZA EXPERIENCES -->
+    <div class="grid md:grid-cols-2 gap-12 mb-20">
+      <div class="bg-amber-50 border border-amber-100 rounded-3xl p-10">
+        <div class="uppercase tracking-widest text-xs font-medium text-amber-800 mb-2">Signature Experience</div>
+        <h3 class="heading-font text-4xl text-amber-950 mb-2">Mezza Libanesa</h3>
+        <div class="text-3xl font-semibold text-amber-900">38 € <span class="text-base font-normal text-stone-500">per person</span></div>
+        <div class="mt-6 text-stone-600">Minimum 2 people • Cold &amp; hot mezze • Traditional grill • Glass of organic wine or 33 cl beer</div>
+      </div>
+      
+      <div class="bg-white border border-stone-100 rounded-3xl p-10">
+        <div class="uppercase tracking-widest text-xs font-medium text-stone-500 mb-2">Light Experience</div>
+        <h3 class="heading-font text-4xl text-stone-800 mb-2">Experiencia Libanesa</h3>
+        <div class="text-3xl font-semibold text-stone-800">26 € <span class="text-base font-normal text-stone-500">per person</span></div>
+        <div class="mt-6 text-stone-600">Minimum 2 people • Cold &amp; hot mezze • Traditional grill • Glass of wine or 25 cl beer</div>
+      </div>
+    </div>
+
+    <!-- APPETIZERS -->
+    <div class="mb-20">
+      <h2 class="section-title heading-font text-3xl text-amber-900 mb-10 text-center">Mezze &amp; Appetizers</h2>
+      
+      <div class="grid md:grid-cols-2 gap-x-16 gap-y-10">
+        <!-- Left column -->
+        <div class="space-y-8">
+          <div class="dish-item flex justify-between group">
+            <div class="flex-1">
+              <div class="font-medium">Hummus Clásico</div>
+              <div class="text-sm text-stone-600">Chickpea purée, tahini, lemon, garlic, cumin</div>
+            </div>
+            <div class="text-right font-semibold text-lg">9 / 14 €</div>
           </div>
-          <p>Con carne angus salteada y piñones.</p>
+          
+          <div class="dish-item flex justify-between group">
+            <div class="flex-1">
+              <div class="font-medium">Berenjena</div>
+              <div class="text-sm text-stone-600">Charcoal-roasted eggplant, tahini, lemon, garlic, pomegranate molasses</div>
+            </div>
+            <div class="text-right font-semibold text-lg">11 / 16 €</div>
+          </div>
+          
+          <div class="dish-item flex justify-between group">
+            <div class="flex-1">
+              <div class="font-medium">Muhammara</div>
+              <div class="text-sm text-stone-600">Roasted red pepper, walnuts, pistachios, pomegranate molasses</div>
+            </div>
+            <div class="text-right font-semibold text-lg">12 / 16 €</div>
+          </div>
+          
+          <div class="dish-item flex justify-between group">
+            <div class="flex-1">
+              <div class="font-medium">Falafel</div>
+              <div class="text-sm text-stone-600">Traditional chickpea falafel • 2 / 5 pcs</div>
+            </div>
+            <div class="text-right font-semibold text-lg">5 / 12 €</div>
+          </div>
+          
+          <div class="dish-item flex justify-between group">
+            <div class="flex-1">
+              <div class="font-medium">Hojas de Parra Caseras</div>
+              <div class="text-sm text-stone-600">Stuffed vine leaves • 3 / 6 pcs</div>
+            </div>
+            <div class="text-right font-semibold text-lg">6 / 10 €</div>
+          </div>
+        </div>
+
+        <!-- Right column -->
+        <div class="space-y-8">
+          <div class="dish-item flex justify-between group">
+            <div class="flex-1">
+              <div class="font-medium">Kebbe</div>
+              <div class="text-sm text-stone-600">Beef &amp; bulgur croquette, yogurt sauce • 2 / 4 pcs</div>
+            </div>
+            <div class="text-right font-semibold text-lg">7 / 13 €</div>
+          </div>
+          
+          <div class="dish-item flex justify-between group">
+            <div class="flex-1">
+              <div class="font-medium">Fattoush</div>
+              <div class="text-sm text-stone-600">Traditional Lebanese salad with crispy bread &amp; sumac</div>
+            </div>
+            <div class="text-right font-semibold text-lg">12 / 15 €</div>
+          </div>
+          
+          <div class="dish-item flex justify-between group">
+            <div class="flex-1">
+              <div class="font-medium">Batata Harra</div>
+              <div class="text-sm text-stone-600">Spicy sautéed potatoes, garlic, coriander, sweet paprika</div>
+            </div>
+            <div class="text-right font-semibold text-lg">10 / 14 €</div>
+          </div>
+          
+          <div class="dish-item flex justify-between group">
+            <div class="flex-1">
+              <div class="font-medium">Raka Queso</div>
+              <div class="text-sm text-stone-600">Feta &amp; mozzarella rolls with nigella • 3 / 6 pcs</div>
+            </div>
+            <div class="text-right font-semibold text-lg">7 / 12 €</div>
+          </div>
+          
+          <div class="dish-item flex justify-between group">
+            <div class="flex-1">
+              <div class="font-medium">Plato Vegetariano</div>
+              <div class="text-sm text-stone-600">Hummus, smoked eggplant, rice, falafel, stuffed vine leaves, spinach pastry</div>
+            </div>
+            <div class="text-right font-semibold text-lg">26 €</div>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="menu-item">
-        <div class="menu-row">
-          <div class="menu-header">
-            <h3>29. MUHAMMARA</h3>
-            <span class="price">12 / 16 </span>
+    <!-- BBQ SECTION -->
+    <div class="bg-white rounded-3xl p-10 mb-20">
+      <h2 class="section-title heading-font text-3xl text-amber-900 mb-10 text-center">BBQ on Volcanic Stone</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="font-medium mb-1 text-lg">INDIVIDUAL (220 g / 2 skewers)</div>
+          <div class="space-y-6 text-sm">
+            <div class="flex justify-between"><span>Taouk</span><span class="font-semibold">27 €</span></div>
+            <div class="flex justify-between"><span>Mechwi</span><span class="font-semibold">30 €</span></div>
+            <div class="flex justify-between"><span>Solomillo</span><span class="font-semibold">37 €</span></div>
           </div>
-          <p>Crema de pimiento rojo asado con nueces y melaza de granada.</p>
+          <div class="text-[10px] mt-8 text-stone-500 leading-tight">Accompanied by golden crisp wedges, hummus &amp; fresh salad with honey-mustard vinaigrette</div>
+        </div>
+        
+        <div>
+          <div class="font-medium mb-1 text-lg">MEZZA (440 g / 4 skewers)</div>
+          <div class="space-y-6 text-sm">
+            <div class="flex justify-between"><span>Taouk</span><span class="font-semibold">42 €</span></div>
+            <div class="flex justify-between"><span>Mechwi</span><span class="font-semibold">45 €</span></div>
+            <div class="flex justify-between"><span>Solomillo</span><span class="font-semibold">49 €</span></div>
+          </div>
+          <div class="text-[10px] mt-8 text-stone-500 leading-tight">Accompanied by golden crisp wedges, Lebanese rice, hummus, smoked eggplant &amp; fresh salad</div>
+        </div>
+        
+        <div class="text-xs text-stone-500 space-y-4 pt-6 md:pt-0 border-t md:border-none">
+          <div>Upgrade Individual:</div>
+          <div>+8 € Taouk • +11 € Mechwi • +14 € Solomillo</div>
+          <div class="pt-4 border-t">Extra skewer served with grilled eggplant, wedges &amp; mushroom salad</div>
         </div>
       </div>
+    </div>
 
-      <div class="menu-item">
-        <div class="menu-row">
-          <div class="menu-header">
-            <h3>11. BERENJENA</h3>
-            <span class="price">10 / 15 </span>
-          </div>
-          <p>Crema de berenjenas asadas con limón, tahini, ajo y granada.</p>
+    <!-- DESSERTS -->
+    <div>
+      <h2 class="section-title heading-font text-3xl text-amber-900 mb-8 text-center">Postres • Desserts</h2>
+      <div class="max-w-md mx-auto grid grid-cols-2 gap-x-12 gap-y-6 text-center">
+        <div>
+          <div class="font-medium">Chocolate Fondant with Chantilly</div>
+          <div class="text-amber-900 font-semibold mt-1">6 €</div>
+        </div>
+        <div>
+          <div class="font-medium">Apple Pie</div>
+          <div class="text-amber-900 font-semibold mt-1">6 €</div>
+        </div>
+        <div>
+          <div class="font-medium">Baklava (2 pcs.)</div>
+          <div class="text-amber-900 font-semibold mt-1">7 €</div>
+        </div>
+        <div>
+          <div class="font-medium">B05 Artisanal Knafeh <span class="text-xs block">(for two • 15 min)</span></div>
+          <div class="text-amber-900 font-semibold mt-1">16 €</div>
         </div>
       </div>
+    </div>
 
-      <div class="menu-item">
-        <div class="menu-row">
-          <div class="menu-header">
-            <h3>13. HOJAS DE PARRA</h3>
-            <span class="price">7 / 12 </span>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-amber-950 text-amber-100 py-16 mt-20">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-sm">
+      <div>
+        All our fried preparations are made with extra virgin olive oil.<br><br>
+        <span class="block">Lebanese Bread (bag) — 2 €<br>Unfinished bread may be taken home.</span>
+      </div>
+      <div class="text-center">
+        <div class="mb-6">Prepared daily with fresh ingredients in limited quantities.<br>Subject to availability.</div>
+        <div class="inline-flex flex-col items-center">
+          <div class="w-28 h-28 bg-white p-2 rounded-2xl">
+            <!-- QR placeholder -->
+            <div class="w-full h-full bg-gradient-to-br from-amber-300 to-amber-700 flex items-center justify-center text-[10px] text-white font-mono">QR</div>
           </div>
-          <p>Rellenos de arroz, tomate y cebolla (3 / 6 uds.).</p>
+          <div class="text-[10px] mt-3 opacity-70">Scan for full menu &amp; allergens</div>
         </div>
       </div>
-
-      <div class="menu-item">
-        <div class="menu-row">
-          <div class="menu-header">
-            <h3>14. FATTOUSH</h3>
-            <span class="price">12 / 15 </span>
-          </div>
-          <p>Ensalada fresca de lechuga, tomate, pepino, rábano y pan, zumaque.</p>
-        </div>
+      <div class="text-right">
+        All our dishes contain nuts and sesame without exception.<br>
+        <span class="text-amber-300">Please inform our team of any allergies.</span><br><br>
+        <span class="text-xs opacity-60">v13 • B05 Valencia</span>
       </div>
-    </section>
+    </div>
+  </footer>
 
-    <!-- MEZZE CALIENTE -->
-    <section class="menu-section">
-      <h2>MEZZE CALIENTE</h2>
-
-      <div class="menu-item">
-        <div class="menu-row">
-          <div class="menu-header">
-            <h3>9. KEBBE</h3>
-            <span class="price">7 / 12 </span>
-          </div>
-          <p>Croqueta de carne angus y bulgur, crujiente por fuera, tierna por dentro (2 / 4 uds.).</p>
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-row">
-          <div class="menu-header">
-            <h3>12. FALAFEL</h3>
-            <span class="price">5 / 12 </span>
-          </div>
-          <p>Garbanzos molidos, cebolla, ajo, tomate, perejil, tahini y pan (2 / 5 uds.).</p>
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-row">
-          <div class="menu-header">
-            <h3>10. BATATA HARRA</h3>
-            <span class="price">10 / 14 </span>
-          </div>
-          <p>Patatas doradas salteadas con ajo, cilantro fresco, limón y pimentón dulce.</p>
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-row">
-          <div class="menu-header">
-            <h3>8. RAKA QUESO</h3>
-            <span class="price">7 / 12 </span>
-          </div>
-          <p>Quesos crujientes rellenos de feta y mozzarella (3 / 6 uds.).</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- TAPAS -->
-    <section class="menu-section">
-      <h2>TAPAS</h2>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>40. HUMMUS</h3><span class="desc">&nbsp;&nbsp;&nbsp;&nbsp;1 ud.</span><span class="price">2.20 </span></div></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>41. BERENJENA</h3><span class="desc">&nbsp;&nbsp;&nbsp;&nbsp;1 ud.</span><span class="price">2.20 </span></div></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>42. HOJAS DE PARRA</h3><span class="desc">&nbsp;&nbsp;&nbsp;1 ud.</span><span class="price">2.30 </span></div></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>43. FALAFEL</h3><span class="desc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 ud.</span><span class="price">2.50 </span></div></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>44. RAKAKAT</h3><span class="desc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 ud.</span><span class="price">2.40 </span></div></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>48. KEBBE</h3><span class="desc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 ud.</span><span class="price">3.50 </span></div></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>45. SAMBOUSIC QUESO</h3><span class="price">2.50 </span></div><p>Empanadillas libanesas rellenas de mezcla de quesos (feta y mozzarella), fritas.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>46. SAMBOUSIC CARNE</h3><span class="price">2.60 </span></div><p>Empanadillas libanesas rellenas de carne.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>47. FATAYER</h3><span class="price">2.00 </span></div><p>Empanada libanesa de espinacas frescas, cebolla y granada.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>49. BRAVA LIBANÉS</h3><span class="price">7.00 </span></div><p>Patatas doradas con ajo local y salsa picante.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>50. ROLLITO LIBANÉS DE POLLO</h3><span class="price">7.00 </span></div><p>Con pollo marinado, tomate, cebolla, pepinillos y salsa de ajo. 10 cm.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>51. ROLLITO LIBANÉS DE CARNE</h3><span class="price">7.00 </span></div><p>Con ternera marinada, tomate, cebolla y tahini.10 cm.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>52. PAN LIBANÉS</h3><span class="price">1.50 </span></div><p>-</p></div></div>
-    </section>
-
-
-    
-
-
-
-    <!-- BARBACOA -->
-    <section class="menu-section">
-      <h2>BARBACOA</h2>
-      <div class="fineprint">Todos platos van acompañados de ensalada, arroz o patata,
-         Hummus o Berenjena + 1 </div>
-
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>24. BBQ KAFTA</h3><span class="price">18 </span></div><p>Carnes Angus picadas: cebolla/perejil o sujouk (especias armenias).</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>23. BBQ POLLO</h3><span class="price">19 </span></div><p>Pollo Grand CUK marinado al estilo taouk, con alioli y rodajas frescas.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>25. BBQ CARNE</h3><span class="price">20 </span></div><p>Brochetas de ternera Angus, marinadas y a la parrilla al estilo libanés.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>22. BBQ MIXTO</h3><span class="price">25 </span></div><p>BBQ Pollo, BBQ Carne y BBQ Kafta.</p></div></div>
-    </section>
-
-    <!-- SHAWARMA -->
-    <section class="menu-section">
-      <h2>SHAWARMA</h2>
-
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>17. TABLA SHAWARMA CARNE</h3><span class="price">20 </span></div><p>Ternera Angus marinada con pan libanés, ensalada fresca, patatas especiadas y tahini casero.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>19. TABLA SHAWARMA POLLO</h3><span class="price">19 </span></div><p>Pechuga de pollo Grand CUK estilo taouk, pan libanés, ensalada fresca, patatas especiadas y salsa de ajo casera.</p></div></div>
-    </section>
-
-    <!-- PAN LIBANÉS EXTRAFINO -->
-    <section class="menu-section">
-      <h2>Pan libanés hecho a mano extrafino (30 cm)</h2>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>18. ROLLITO LIBANÉS DE CARNE</h3><span class="price">17 </span></div><p>Con ternera marinada, tomate, cebolla y tahini.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>20. ROLLITO LIBANÉS DE POLLO</h3><span class="price">16 </span></div><p>Con pollo marinado, tomate, cebolla, pepinillos y salsa de ajo.</p></div></div>
-    </section>
-
-    <!-- MEZZE VEGGIE -->
-    <section class="menu-section">
-      <h2>MEZZE VEGGIE</h2>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>16. PLATO MIXTO</h3><span class="price">18 </span></div><p>Hummus, arroz con lentejas, falafel, sambousec, hojas de parra, fatayer (2 uds de cada) y ensalada.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>27. VEGGIE PLATO</h3><span class="price">17 </span></div><p>Pan libanés relleno de gyro vegetal, patata, encurtidos y salsa tahini.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>26. FETA SALAD</h3><span class="price">14 </span></div><p>Feta, lechuga, tomate, pepino, cebolla, pimiento rojo, aceitunas.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>21. ROLLITO FALAFEL</h3><span class="price">13 </span></div><p>Falafel, verduras frescas, tahini y encurtidos en pan libanés caliente.</p></div></div>
-    </section>
-
-    <!-- MENÚ DEGUSTACIÓN -->
-    <section class="menu-section">
-      <h2>MENÚ DEGUSTACIÓN</h2>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>30. MENÚ DEGUSTACIÓN</h3><span class="price">25 </span></div><p>Por persona (mínimo 2). Entrantes fríos (Fattoush, Hummus, Berenjena), entrantes calientes (Hojas de Parra, Falafel, Rakakat, Sambousec, Fatayer) y BBQ Pincho Pollo y Kafta (2 uds de cada). Incluye copa de vino o doble Estrella Galicia.</p></div></div>
-    </section>
-
-    <!-- POSTRES -->
-    <section class="menu-section">
-      <h2>POSTRES</h2>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>KANAFE</h3><span class="price">13 </span></div><p>Para 2 personas.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>BAKLAVA</h3><span class="price">7 </span></div><p>Masa filo con nueces y miel (2 uds).</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>POSTRE DE LA CASA</h3><span class="price">7 </span></div><p>Para 2 personas.</p></div></div>
-    </section>
-
-    <!-- BEBIDAS -->
-    <section class="menu-section">
-      <h2>BEBIDAS</h2>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>CAFÉ</h3><span class="price">2.50 </span></div><p>Con leche +0.50.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>TÉ</h3><span class="price">2.50 </span></div><p>Con leche +0.50.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>TÉ LIBANÉS (JARRA)</h3><span class="price">10 </span></div><p></p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>AGUA</h3><span class="price">2.50 / 5 </span></div><p></p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>AGUA CON GAS</h3><span class="price">3 / 5 </span></div><p></p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>COCA-COLA, FANTA</h3><span class="price">2.50 </span></div><p></p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>CÓCTELES</h3><span class="price">8 / 12 </span></div><p></p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>CUBATA</h3><span class="price">6 / 10 </span></div><p></p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>CHUPITO</h3><span class="price">2.5 / 5 </span></div><p></p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>TINTO DE VERANO</h3><span class="price">5 / 7 </span></div><p></p></div></div>
-
-      <div class="menu-item">
-        <div class="menu-row">
-          <div class="menu-header">
-            <h3>ALHAMBRA · ESTRELLA GALICIA · TURIA</h3>
-            <span class="price">3 / 3.5 / 4.5 / 14 </span>
-          </div>
-          <p>Tercio 33cl / Doble 33cl / Tanque 50cl / Jarra 1L.</p>
-        </div>
-      </div>
-
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>ARAK LIBANÉS</h3><span class="price">7 / 14 / 50 </span></div><p></p></div></div>
-    </section>
-
-    <!-- VINOS -->
-    <section class="menu-section">
-      <h2>VINOS</h2>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>VINO Casa</h3><span class="price">4 / 15 </span></div><p>Sencillo y equilibrado, para acompañar cualquier plato.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>VINO Magnífico</h3><span class="price">5 / 20 </span></div><p>De carácter redondo, con notas frutales y final suave.</p></div></div>
-      <div class="menu-item"><div class="menu-row"><div class="menu-header"><h3>VINO Sublime</h3><span class="price">7 / 30 </span></div><p>Elegante y expresivo, perfecto para ocasiones especiales.</p></div></div>
-    </section>
-
-    <footer class="footer">
-      <p>Todos nuestros platos se preparan con ingredientes frescos y aceite de oliva virgen extra de España. Grand CUK: Pollo ecológico de raza española (tipo CUK). La carne utilizada procede de la UE y se marina con especias tradicionales libanesas. Nuestros platos pueden contener frutos secos y sésamo.</p>
-    <p>⚠️ Por motivos de seguridad alimentaria, todos nuestros platos pueden contener o estar en contacto con cualquiera de los 14 alérgenos principales (gluten, frutos secos, sésamo, lácteos, huevo, pescado, marisco, soja, apio, mostaza, altramuces, moluscos y sulfitos).</p>
-      <p> B05 Comida Libanesa · Plaza Vicent Iborra 5, 46003 Valencia </p>
-    </footer>
-  </main>
+  <script>
+    // Tailwind script already included via CDN
+  </script>
 </body>
 </html>
